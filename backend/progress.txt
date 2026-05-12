@@ -3,7 +3,7 @@ Project Overview
 
 This is a Dockerized microservices-based backend system for a Smart Delivery and Route Optimization platform. The architecture follows distributed system principles using independent services connected through an API Gateway. The platform is being developed as a hackathon MVP using free/open-source technologies and MongoDB Atlas as the cloud database.
 
-Current Progress (as of May 11, 2026)
+Current Progress (as of May 12, 2026)
 ✅ Completed Components
 1. Project Architecture & Infrastructure
 Microservices Architecture
@@ -166,6 +166,39 @@ docker compose up --build
 
 Starts entire backend infrastructure.
 
+8. GitHub Repository Setup ✅
+Repository
+Pushed to: https://github.com/intsurjeetkaran-droid/smart_delivery_system
+Branch: main
+Root .gitignore added (covers node_modules, .env, dist, logs, coverage, OS/IDE files)
+README.md with full local setup and running steps (Docker + manual)
+
+9. Bug Fix — API Gateway POST Body Forwarding ✅
+Issue Found
+All POST/PATCH requests through the API Gateway were hanging indefinitely.
+Root Cause
+express.json() was registered globally in the gateway before proxy routes.
+Express consumed the request body stream, leaving nothing for http-proxy-middleware to forward.
+The proxy sent an empty body and waited forever for a response.
+Fix Applied
+Removed express.json() from global middleware in api-gateway/src/server.js
+Added if (req.body) re-stream guards in each onProxyReq handler
+Result
+All proxy POST/PATCH requests now work correctly end-to-end.
+
+10. Integration Test Suite ✅
+File: backend/scripts/test-services.js
+Test Coverage
+Section	Tests
+1. Health Checks (direct ports)	5 tests
+2. API Gateway proxy routing	5 tests
+3. Auth Service (register/login/profile)	6 tests
+4. Order Service CRUD	6 tests
+5. End-to-End via Gateway	3 tests
+Total: 25 tests — all passing ✅
+Run Command
+node backend/scripts/test-services.js
+
 🚧 In Progress
 1. Route Optimization Engine 🚧
 Planned Features
@@ -221,10 +254,10 @@ Route replay
 Live map rendering
 5. Testing
 Unit testing
-Integration testing
-API testing
+Integration testing ✅ (25/25 passing — backend/scripts/test-services.js)
+API testing ✅
 Socket testing
-Docker environment testing
+Docker environment testing ✅
 6. Monitoring & Logging
 Centralized logs
 Error monitoring
@@ -276,19 +309,20 @@ Leaflet.js
 OpenStreetMap
 Current Completion Status
 Module	Completion
-Infrastructure	90%
+Infrastructure	100%
 API Gateway	100%
 Authentication	95%
 Order Service	90%
 Tracking Service	75%
 Notification Service	80%
 Route Optimization	10%
-Frontend	0%
-Testing	5%
-Deployment	20%
+Frontend	35%
+Testing	40%
+Deployment	25%
+GitHub / DevOps	100%
 Overall Project Completion
 Approximate Completion:
-~55% Complete
+~65% Complete
 Recommended Next Priority
 Immediate Next Task
 Build Route Optimization Service
