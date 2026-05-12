@@ -3,6 +3,7 @@ const express = require("express");
 const {
   register,
   login,
+  getProfile,
 } = require("../controllers/authController");
 
 const { protect } = require("../middlewares/authMiddleware");
@@ -26,13 +27,7 @@ router.post("/login", login);
 
 
 
-router.get("/profile", protect, (req, res) => {
-  res.json({
-    success: true,
-    message: "Protected Route Accessed",
-    user: req.user,
-  });
-});
+router.get("/profile", protect, getProfile);
 
 
 

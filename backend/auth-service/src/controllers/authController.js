@@ -5,6 +5,33 @@ const User = require("../models/User");
 
 
 
+exports.getProfile = async (req, res) => {
+  try {
+    // req.user is set by protect middleware and contains { id, role }
+    const user = await User.findById(req.user.id).select("-password");
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "Profile fetched successfully",
+      user,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+
+
 exports.register = async (req, res) => {
   try {
     const { name, email, password, role } = req.body;

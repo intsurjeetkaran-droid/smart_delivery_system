@@ -1,7 +1,7 @@
 {
-  "name": "order-service",
+  "name": "route-optimization-service",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
@@ -9,14 +9,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Route optimization microservice using Haversine distance + nearest-neighbor TSP",
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "helmet": "^8.1.0",
-    "jsonwebtoken": "9.0.3",
-    "mongoose": "^8.23.1",
+    "jsonwebtoken": "^9.0.3",
     "morgan": "^1.10.1"
   },
   "devDependencies": {
