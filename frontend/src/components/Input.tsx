@@ -11,24 +11,29 @@ const Input: React.FC<InputProps> = ({ label, error, icon, className = '', id, .
   return (
     <div className="w-full">
       {label && (
-        <label htmlFor={inputId} className="block text-sm font-medium text-gray-700 mb-1.5">
+        <label htmlFor={inputId} className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
           {label}
         </label>
       )}
       <div className="relative">
         {icon && (
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 dark:text-gray-500">
             {icon}
           </div>
         )}
         <input
           id={inputId}
           className={`
-            w-full rounded-xl border bg-white px-4 py-2.5 text-sm text-gray-900
-            placeholder:text-gray-400 transition-all duration-150
+            w-full rounded-xl border bg-white dark:bg-gray-800 px-4 py-2.5 text-sm
+            text-gray-900 dark:text-gray-100
+            placeholder:text-gray-400 dark:placeholder:text-gray-500
+            transition-all duration-150
             focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent
-            disabled:bg-gray-50 disabled:text-gray-500
-            ${error ? 'border-red-400 focus:ring-red-400' : 'border-gray-200 hover:border-gray-300'}
+            disabled:bg-gray-50 dark:disabled:bg-gray-900 disabled:text-gray-500
+            ${error
+              ? 'border-red-400 focus:ring-red-400'
+              : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
+            }
             ${icon ? 'pl-10' : ''}
             ${className}
           `}

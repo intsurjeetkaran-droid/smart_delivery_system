@@ -27,7 +27,7 @@ const LoginPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-navy-800 via-navy-700 to-navy-600 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-navy-800 via-navy-700 to-navy-600 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
@@ -39,7 +39,7 @@ const LoginPage: React.FC = () => {
         </div>
 
         {/* Card */}
-        <div className="bg-white rounded-2xl shadow-modal p-8">
+        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-modal border border-gray-100 dark:border-gray-800 p-8">
           <form onSubmit={handleSubmit} className="space-y-5">
             <Input
               label="Email address"
@@ -61,7 +61,7 @@ const LoginPage: React.FC = () => {
             />
 
             {error && (
-              <div className="bg-red-50 border border-red-200 text-red-600 text-sm rounded-xl px-4 py-3">
+              <div className="bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 text-sm rounded-xl px-4 py-3">
                 {error}
               </div>
             )}
@@ -71,16 +71,16 @@ const LoginPage: React.FC = () => {
             </Button>
           </form>
 
-          <p className="text-center text-sm text-gray-500 mt-6">
+          <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-6">
             Don't have an account?{' '}
-            <Link to="/register" className="text-brand-600 font-semibold hover:text-brand-700">
+            <Link to="/register" className="text-brand-600 dark:text-brand-400 font-semibold hover:text-brand-700 dark:hover:text-brand-300">
               Create one
             </Link>
           </p>
         </div>
 
         <p className="text-center text-white/40 text-xs mt-6">
-          Demo: register with any email to get started
+          Demo: use credentials from credentials.txt
         </p>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Truck } from 'lucide-react'
 
 const Footer: React.FC = () => (
-  <footer className="bg-navy-900 text-white/60 py-6 mt-auto">
+  <footer className="bg-navy-900 dark:bg-gray-950 text-white/60 py-6 mt-auto border-t border-white/5 dark:border-gray-800">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
       <div className="flex items-center gap-2">
         <div className="w-6 h-6 bg-brand-500 rounded-md flex items-center justify-center">

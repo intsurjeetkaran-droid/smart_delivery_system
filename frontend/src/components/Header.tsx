@@ -1,33 +1,33 @@
 import React, { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-import { Package, LogOut, User, Menu, X, Truck, LayoutDashboard, MapPin } from 'lucide-react'
+import { Package, LogOut, User, Menu, X, Truck, LayoutDashboard, MapPin, Sun, Moon } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
+import { useTheme } from '../context/ThemeContext'
 
 const Header: React.FC = () => {
   const { user, isAuthenticated, logout } = useAuth()
+  const { theme, toggleTheme } = useTheme()
   const navigate = useNavigate()
   const location = useLocation()
   const [mobileOpen, setMobileOpen] = useState(false)
 
-  const handleLogout = () => {
-    logout()
-    navigate('/')
-  }
+  const handleLogout = () => { logout(); navigate('/') }
 
   const navLinks = [
     { to: '/dashboard', label: 'Dashboard', icon: <LayoutDashboard size={16} /> },
-    { to: '/orders', label: 'Orders', icon: <Package size={16} /> },
-    { to: '/tracking', label: 'Tracking', icon: <MapPin size={16} /> },
+    { to: '/orders',    label: 'Orders',    icon: <Package size={16} /> },
+    { to: '/tracking',  label: 'Tracking',  icon: <MapPin size={16} /> },
   ]
 
   const isActive = (path: string) => location.pathname === path
 
   return (
-    <header className="bg-navy-800 text-white sticky top-0 z-40 shadow-lg">
+    <header className="bg-navy-800 dark:bg-gray-950 text-white sticky top-0 z-40 shadow-lg border-b border-white/5 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+
           {/* Logo */}
-          <Link to={isAuthenticated ? '/dashboard' : '/'} className="flex items-center gap-2.5 group">
+          <Link to={isAuthenticated ? '/dashboard' : '/'} className="flex items-center gap-2.5 group flex-shrink-0">
             <div className="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center group-hover:bg-brand-400 transition-colors">
               <Truck size={18} className="text-white" />
             </div>
@@ -40,24 +40,29 @@ const Header: React.FC = () => {
           {isAuthenticated && (
             <nav className="hidden md:flex items-center gap-1">
               {navLinks.map(link => (
-                <Link
-                  key={link.to}
-                  to={link.to}
+                <Link key={link.to} to={link.to}
                   className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive(link.to)
                       ? 'bg-white/10 text-white'
                       : 'text-white/70 hover:text-white hover:bg-white/10'
-                  }`}
-                >
-                  {link.icon}
-                  {link.label}
+                  }`}>
+                  {link.icon}{link.label}
                 </Link>
               ))}
             </nav>
           )}
 
           {/* Right side */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            {/* Theme toggle */}
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="p-2 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-colors"
+            >
+              {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
+            </button>
+
             {isAuthenticated ? (
               <>
                 <div className="hidden sm:flex items-center gap-2 bg-white/10 rounded-xl px-3 py-1.5">
@@ -103,20 +108,22 @@ const Header: React.FC = () => {
 
       {/* Mobile Nav */}
       {isAuthenticated && mobileOpen && (
-        <div className="md:hidden border-t border-white/10 bg-navy-800 px-4 py-3 space-y-1">
+        <div className="md:hidden border-t border-white/10 bg-navy-800 dark:bg-gray-950 px-4 py-3 space-y-1">
           {navLinks.map(link => (
-            <Link
-              key={link.to}
-              to={link.to}
-              onClick={() => setMobileOpen(false)}
+            <Link key={link.to} to={link.to} onClick={() => setMobileOpen(false)}
               className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                 isActive(link.to) ? 'bg-white/10 text-white' : 'text-white/70 hover:text-white hover:bg-white/10'
-              }`}
-            >
-              {link.icon}
-              {link.label}
+              }`}>
+              {link.icon}{link.label}
             </Link>
           ))}
+          {/* User info on mobile */}
+          <div className="flex items-center gap-2 px-3 py-2 mt-2 border-t border-white/10">
+            <div className="w-6 h-6 bg-brand-500 rounded-full flex items-center justify-center">
+              <User size={12} />
+            </div>
+            <span className="text-xs text-white/70 capitalize">{user?.name} · {user?.role}</span>
+          </div>
         </div>
       )}
     </header>
