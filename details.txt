@@ -1,0 +1,449 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║          SMART DELIVERY & ROUTE OPTIMIZATION SYSTEM                          ║
+║          Complete Platform Guide — For Everyone                              ║
+║                                                                              ║
+║          Developer: Surjeet Akaran                                           ║
+║          GitHub:    https://github.com/intsurjeetkaran-droid/smart_delivery_system ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  WHAT IS THIS PLATFORM?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Smart Delivery is a complete delivery management platform — like a mini version
+of what companies like Swiggy, Zomato, or Amazon use to manage their deliveries.
+
+It connects three types of people:
+
+  CUSTOMERS  — People who want something delivered
+  DRIVERS    — People who pick up and deliver the packages
+  ADMINS     — The company/manager who oversees everything
+
+The platform handles everything from the moment a customer places an order to
+the moment it arrives at their door — including finding the fastest route for
+the driver, tracking the driver live on a map, and sending delivery updates.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  A REAL-LIFE STORY — HOW THE PLATFORM WORKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Let's follow a real delivery from start to finish.
+
+─────────────────────────────────────────────────────────────────────────────
+  SCENE: Rahul orders a laptop from an online store in Bangalore
+─────────────────────────────────────────────────────────────────────────────
+
+STEP 1 — Rahul creates an account
+  Rahul opens the Smart Delivery website and registers as a "Customer".
+  He enters his name, email, and password. The system gives him a secure
+  login token so he can use the platform.
+
+STEP 2 — Rahul places his delivery order
+  Rahul fills in:
+    • Pickup address:   Amazon Warehouse, Hosur Road, Bangalore
+    • Delivery address: 45 Koramangala 5th Block, Bangalore
+    • His phone number: 9876543210
+
+  The system creates an order with status "PENDING" — meaning it's waiting
+  for a driver to be assigned.
+
+STEP 3 — Arjun (the Admin) sees the new order
+  Arjun is the delivery company manager. He logs in as Admin and sees
+  Rahul's order sitting in the "Pending" list.
+
+  But Arjun has 3 more deliveries to assign today. Before assigning drivers,
+  he uses the ROUTE OPTIMIZER to figure out the most efficient order to
+  deliver all 4 packages.
+
+  He enters the warehouse location and all 4 delivery addresses. The system
+  calculates:
+    → Best order to visit all stops (shortest total distance)
+    → Total distance: 23.4 km
+    → Estimated time: 1 hour 15 minutes
+
+  This saves fuel and time — instead of a driver zigzagging across the city,
+  they take the most logical path.
+
+STEP 4 — Arjun assigns Ravi (the Driver)
+  Arjun assigns Ravi Kumar (driver_ravi_001) to Rahul's order.
+  The order status changes from "PENDING" → "ASSIGNED".
+  Ravi gets notified that he has a new delivery.
+
+STEP 5 — Ravi picks up the package
+  Ravi arrives at the Amazon warehouse and picks up the laptop.
+  He updates the order status to "PICKED UP" on his dashboard.
+  Rahul can now see that his package is on the way.
+
+STEP 6 — Ravi is on the road — Rahul watches live
+  As Ravi drives towards Koramangala, his phone sends his GPS location
+  to the platform every few seconds.
+
+  Rahul opens the Tracking page, enters his order ID, and sees:
+    → A live map showing exactly where Ravi is right now
+    → An orange trail showing the path Ravi has taken
+    → The map updates automatically as Ravi moves
+
+  This is exactly like watching your Swiggy delivery person move on the map.
+
+STEP 7 — Ravi delivers the package
+  Ravi reaches Rahul's address and hands over the laptop.
+  He marks the order as "DELIVERED".
+
+  The system sends Rahul an email:
+    "Your order has been delivered! Thank you for using Smart Delivery."
+
+STEP 8 — Done!
+  The order is complete. Arjun can see in his dashboard:
+    → 1 delivered, 3 in transit, 2 pending
+    → All drivers' current locations
+    → Full history of every delivery
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  WHO IS THIS PLATFORM FOR?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This platform is useful for any business that delivers things:
+
+  • Online stores (e-commerce) that ship products to customers
+  • Food delivery companies managing multiple delivery boys
+  • Courier services handling packages across a city
+  • Pharmacies delivering medicines to patients
+  • Grocery stores doing home delivery
+  • Any logistics company managing a fleet of drivers
+
+The key benefit: instead of calling drivers on the phone and guessing routes,
+everything is managed digitally — orders, assignments, tracking, and routes —
+all in one place.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  THE THREE USER ROLES — WHAT EACH PERSON CAN DO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CUSTOMER
+  Think of this as: the person ordering food on Swiggy
+  ✔ Register and log in
+  ✔ Place a new delivery order (pickup + delivery address)
+  ✔ View all their orders and current status
+  ✔ Track their delivery live on a map
+  ✔ See the driver's current location in real time
+  ✗ Cannot assign drivers or change order status
+
+DRIVER
+  Think of this as: the delivery person on a bike
+  ✔ Register and log in
+  ✔ View orders assigned to them
+  ✔ Update order status (Picked Up → In Transit → Delivered)
+  ✔ Their GPS location is tracked and shown to customers
+  ✗ Cannot assign themselves to orders (admin does that)
+  ✗ Cannot cancel orders
+
+ADMIN
+  Think of this as: the delivery company manager
+  ✔ Full access to everything
+  ✔ View all orders from all customers
+  ✔ Assign any driver to any order
+  ✔ Update any order status
+  ✔ Use the Route Optimizer to plan efficient delivery routes
+  ✔ Monitor all drivers on the map
+  ✔ Send notifications to customers
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  THE ROUTE OPTIMIZER — THE SMART PART
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Imagine a driver has 5 deliveries to make across Bangalore. Without planning,
+they might drive like this:
+
+  Warehouse → Koramangala → Whitefield → Indiranagar → Whitefield → HSR Layout
+
+Notice they went to Whitefield twice! That's wasted time and fuel.
+
+The Route Optimizer solves this. You give it:
+  • The starting point (warehouse or driver's current location)
+  • All the delivery addresses
+
+It calculates the most efficient order to visit all stops — like solving a
+puzzle to find the shortest path. The result:
+
+  Warehouse → Indiranagar → Koramangala → HSR Layout → Whitefield → Whitefield
+
+Now the driver moves in one logical direction instead of zigzagging.
+
+The system also tells you:
+  • Total distance in kilometres
+  • Estimated time to complete all deliveries
+  • Distance between each stop
+
+Real-world benefit: A company making 20 deliveries a day could save 30-40%
+in fuel costs and finish deliveries 1-2 hours faster just by using this.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  LIVE TRACKING — HOW IT WORKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+When a driver is on the road, their location is sent to the platform
+automatically every few seconds. This uses a technology called Socket.IO —
+think of it as a live phone call between the driver's device and the server.
+
+The customer opens the Tracking page and sees:
+  • A map (powered by OpenStreetMap — free, no Google Maps needed)
+  • An orange marker showing exactly where the driver is right now
+  • An orange trail showing the path the driver has taken
+  • The map updates automatically — no need to refresh the page
+
+Every location point is also saved to the database, so you can replay
+the entire delivery route after it's completed.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ORDER STATUS LIFECYCLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Every order goes through these stages:
+
+  PENDING     → Order placed, waiting for a driver to be assigned
+  ASSIGNED    → Admin has assigned a driver, driver is heading to pickup
+  PICKED UP   → Driver has collected the package from the pickup location
+  IN TRANSIT  → Driver is on the way to the delivery address (live tracking active)
+  DELIVERED   → Package handed to the customer, order complete
+  CANCELLED   → Order was cancelled before delivery
+
+Each status change is recorded with a timestamp, so you always know
+exactly what happened and when.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  THE PAGES — WHAT YOU SEE ON SCREEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+HOME PAGE (/)
+  The landing page. Explains what the platform does, shows key features,
+  and has buttons to register or log in. Anyone can see this.
+
+LOGIN PAGE (/login)
+  Enter your email and password to access your account.
+
+REGISTER PAGE (/register)
+  Create a new account. Choose your role: Customer, Driver, or Admin.
+  The role selector shows three cards — click the one that applies to you.
+
+DASHBOARD (/dashboard)
+  Your home screen after logging in. Shows:
+    • Total orders, pending orders, in-transit orders, delivered orders
+    • A list of your most recent orders with status badges
+    • Quick links to place a new order or go to tracking
+    • Admin users see extra quick-action cards
+
+ORDERS PAGE (/orders)
+  The main order management screen. Shows all orders as cards.
+  You can:
+    • Search orders by customer name or address
+    • Filter by status (All / Pending / Assigned / In Transit / Delivered / Cancelled)
+    • Create a new order (click "New Order" button)
+    • Admins: assign a driver to any pending order
+    • Drivers/Admins: update order status with one click
+    • Click "Track" on any order to jump to the tracking map
+
+TRACKING PAGE (/tracking)
+  The live map screen. Two sections:
+    Left panel:
+      • Enter an order ID to start tracking
+      • See the driver's current GPS coordinates
+      • See how many location points have been recorded
+      • View the full location history list
+      • Route Optimizer: enter start point + delivery stops to get
+        the optimal route with total distance and ETA
+    Right panel:
+      • Interactive map showing the driver's location and trail
+      • Orange marker = driver's current position
+      • Orange dashed line = path the driver has taken
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  THE BACKEND — HOW IT'S BUILT (FOR TECHNICAL READERS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The backend is split into 6 independent services. Each service does one job
+and one job only. This is called a "microservices architecture".
+
+Think of it like a restaurant kitchen:
+  • One chef makes starters (Auth Service)
+  • One chef makes main course (Order Service)
+  • One chef tracks food delivery (Tracking Service)
+  • One chef sends messages to customers (Notification Service)
+  • One chef plans the most efficient serving order (Route Optimization)
+  • One manager at the front desk routes all requests (API Gateway)
+
+SERVICE 1 — API GATEWAY (Port 5000)
+  The single entry point for all requests. Like a receptionist who
+  directs every call to the right department. The frontend only ever
+  talks to this one address.
+
+SERVICE 2 — AUTH SERVICE (Port 5001)
+  Handles user accounts. Register, login, and profile management.
+  Uses JWT tokens (like a digital ID card) that expire after 7 days.
+  Passwords are hashed with bcrypt — never stored as plain text.
+
+SERVICE 3 — ORDER SERVICE (Port 5002)
+  Creates and manages delivery orders. Handles the full lifecycle
+  from pending to delivered. Enforces role-based rules — only admins
+  can assign drivers, only drivers/admins can update status.
+
+SERVICE 4 — TRACKING SERVICE (Port 5003)
+  Receives GPS coordinates from drivers and saves them to the database.
+  Also broadcasts location updates in real time to all connected clients
+  using Socket.IO (WebSocket technology).
+
+SERVICE 5 — NOTIFICATION SERVICE (Port 5004)
+  Sends email notifications for delivery updates. Currently configured
+  as a mock (logs to console) — add real SMTP credentials to activate.
+
+SERVICE 6 — ROUTE OPTIMIZATION SERVICE (Port 5005)
+  The intelligence layer. Takes a starting point and multiple delivery
+  stops, then calculates the most efficient visiting order using the
+  Nearest-Neighbour TSP algorithm with Haversine GPS distance formula.
+  Returns ordered stops, per-segment distances, total distance, and ETA.
+
+DATABASE — MONGODB ATLAS
+  Cloud-hosted database. Three separate databases:
+    Delivery_auth_db     — user accounts
+    Delivery_order_db    — orders
+    Delivery_tracking_db — GPS location history
+
+SECURITY — JWT + RBAC
+  Every protected endpoint requires a valid JWT token in the request header.
+  Role-based access control (RBAC) ensures customers can't do driver actions
+  and drivers can't do admin actions. Each service verifies tokens locally —
+  no inter-service calls needed.
+
+CONTAINERS — DOCKER
+  All 6 services run in Docker containers. One command starts everything:
+    docker-compose up --build
+  Services communicate using Docker's internal DNS (service names as hostnames).
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  THE FRONTEND — WHAT IT'S BUILT WITH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The website is built with React (a popular JavaScript framework) and TypeScript.
+The design uses a deep navy + electric orange colour palette — not a generic
+blue template.
+
+Key technologies:
+  React 18        — The UI framework
+  TypeScript      — Adds type safety to JavaScript
+  Vite            — Fast build tool and dev server
+  Tailwind CSS    — Utility-first styling (custom colour palette)
+  React Router    — Page navigation without full page reloads
+  Axios           — HTTP requests to the backend API
+  Leaflet         — Free, open-source interactive maps
+  Socket.IO       — Real-time WebSocket connection for live tracking
+  Lucide React    — Clean icon library
+
+The frontend runs on port 3000 in development and proxies all /api requests
+to the API Gateway on port 5000.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  COMPLETE TECHNOLOGY STACK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Frontend        React 18, TypeScript, Vite, Tailwind CSS
+  Maps            Leaflet + React Leaflet (OpenStreetMap tiles)
+  Real-Time       Socket.IO (WebSocket)
+  HTTP Client     Axios
+  Icons           Lucide React
+  Backend         Node.js, Express.js
+  Database        MongoDB Atlas (cloud), Mongoose ODM
+  Authentication  JWT (JSON Web Tokens), bcryptjs
+  Route Algorithm Haversine formula + Nearest-Neighbour TSP
+  Notifications   Nodemailer
+  Containers      Docker, Docker Compose
+  Version Control Git, GitHub
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  WHAT'S BEEN BUILT — COMPLETION STATUS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✅ API Gateway                  — Complete
+  ✅ Authentication Service       — Complete (register, login, profile, JWT, RBAC)
+  ✅ Order Service                — Complete (CRUD, status lifecycle, driver assignment)
+  ✅ Tracking Service             — Complete (REST APIs, Socket.IO, DB persistence)
+  ✅ Route Optimization Service   — Complete (TSP algorithm, Haversine, ETA)
+  ✅ Notification Service         — Partial (mock email — needs real SMTP config)
+  ✅ Docker Setup                 — Complete (6 containers, Compose orchestration)
+  ✅ Frontend — Home Page         — Complete
+  ✅ Frontend — Auth Pages        — Complete (login, register with role selector)
+  ✅ Frontend — Dashboard         — Complete (stats, recent orders, quick actions)
+  ✅ Frontend — Orders Page       — Complete (grid, filters, create, assign, status)
+  ✅ Frontend — Tracking Page     — Complete (live map, trail, route optimizer panel)
+  ✅ Integration Tests            — 48/48 passing
+  ✅ Database Seeding             — 8 users, 12 orders, 16 tracking points
+  ✅ GitHub Repository            — Published
+
+  Overall completion: ~92%
+
+  Remaining:
+    • Real email SMTP configuration (~1 hour)
+    • API rate limiting (~2 hours)
+    • Production Docker build (no nodemon) (~2 hours)
+    • Cloud deployment (~1 day)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  HOW TO RUN THE PLATFORM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1 — Start the backend (all 6 services in Docker)
+  Open a terminal in the project root and run:
+    docker-compose -f backend/docker-compose.yml up --build
+
+  Wait until you see all 6 services say "Running on Port XXXX".
+
+STEP 2 — Start the frontend
+  Open a second terminal and run:
+    cd frontend
+    npm install
+    npm run dev
+
+  Open your browser at: http://localhost:5173
+
+STEP 3 — Log in and explore
+  Use the credentials in credentials.txt at the project root.
+  Recommended starting point: log in as Admin to see everything.
+
+STEP 4 — Seed test data (optional, already done)
+  If you need fresh data:
+    node backend/scripts/seed.js
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  TEST CREDENTIALS (QUICK REFERENCE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ADMIN     admin@smartdelivery.com   /  Admin@123
+  DRIVER    ravi.driver@gmail.com     /  Driver@123
+  CUSTOMER  rahul@gmail.com           /  Customer@123
+
+  Full credentials and order IDs: see credentials.txt
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  DEVELOPER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Name:    Surjeet Akaran
+  GitHub:  https://github.com/intsurjeetkaran-droid
+  Project: https://github.com/intsurjeetkaran-droid/smart_delivery_system
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
