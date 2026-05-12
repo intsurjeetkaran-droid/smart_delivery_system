@@ -23,7 +23,10 @@ app.use(helmet());
 
 app.use(morgan("dev"));
 
-app.use(express.json());
+// NOTE: express.json() is intentionally NOT registered globally.
+// The gateway is a pure reverse proxy — parsing the body here would
+// consume the request stream before http-proxy-middleware can forward it,
+// causing POST/PUT/PATCH requests to hang with an empty body.
 
 
 
@@ -67,6 +70,13 @@ app.use(
       console.log(
         `[GATEWAY] Forwarding ${req.method} request to AUTH SERVICE: ${req.originalUrl}`
       );
+      // Re-stream body if it was buffered (e.g. by other middleware)
+      if (req.body) {
+        const bodyData = JSON.stringify(req.body);
+        proxyReq.setHeader("Content-Type", "application/json");
+        proxyReq.setHeader("Content-Length", Buffer.byteLength(bodyData));
+        proxyReq.write(bodyData);
+      }
     },
 
     onError: (err, req, res) => {
@@ -101,6 +111,12 @@ app.use(
       console.log(
         `[GATEWAY] Forwarding ${req.method} request to ORDER SERVICE: ${req.originalUrl}`
       );
+      if (req.body) {
+        const bodyData = JSON.stringify(req.body);
+        proxyReq.setHeader("Content-Type", "application/json");
+        proxyReq.setHeader("Content-Length", Buffer.byteLength(bodyData));
+        proxyReq.write(bodyData);
+      }
     },
 
     onError: (err, req, res) => {
@@ -135,6 +151,12 @@ app.use(
       console.log(
         `[GATEWAY] Forwarding ${req.method} request to TRACKING SERVICE: ${req.originalUrl}`
       );
+      if (req.body) {
+        const bodyData = JSON.stringify(req.body);
+        proxyReq.setHeader("Content-Type", "application/json");
+        proxyReq.setHeader("Content-Length", Buffer.byteLength(bodyData));
+        proxyReq.write(bodyData);
+      }
     },
 
     onError: (err, req, res) => {
@@ -169,6 +191,12 @@ app.use(
       console.log(
         `[GATEWAY] Forwarding ${req.method} request to NOTIFICATION SERVICE: ${req.originalUrl}`
       );
+      if (req.body) {
+        const bodyData = JSON.stringify(req.body);
+        proxyReq.setHeader("Content-Type", "application/json");
+        proxyReq.setHeader("Content-Length", Buffer.byteLength(bodyData));
+        proxyReq.write(bodyData);
+      }
     },
 
     onError: (err, req, res) => {
