@@ -148,23 +148,23 @@ const OrderCard: React.FC<OrderCardProps> = ({ order, role, onStatusUpdate, onAs
         </div>
       )}
 
-      <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-800 flex-wrap gap-2">
-        <span className="text-xs text-gray-400 dark:text-gray-500">{formatDate(order.createdAt)}</span>
-        <div className="flex items-center gap-2 flex-wrap">
+      <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-800 gap-2 flex-wrap">
+        <span className="text-xs text-gray-400 dark:text-gray-500 flex-shrink-0">{formatDate(order.createdAt)}</span>
+        <div className="flex items-center gap-1.5 flex-wrap justify-end">
           <Link to={`/tracking?orderId=${order._id}`}
-            className="text-xs text-brand-600 dark:text-brand-400 hover:text-brand-700 font-medium flex items-center gap-1">
+            className="text-xs text-brand-600 dark:text-brand-400 hover:text-brand-700 font-medium flex items-center gap-1 whitespace-nowrap">
             <MapPin size={12} /> Track
           </Link>
           {canAssign && (
             <Button size="sm" variant="outline" onClick={() => onAssignDriver(order)}>
-              <Truck size={13} /> Assign Driver
+              <Truck size={13} /> <span className="hidden sm:inline">Assign</span>
             </Button>
           )}
           {canUpdateStatus && transitions.map(s => (
             <Button key={s} size="sm" variant={s === 'cancelled' ? 'danger' : 'primary'}
               onClick={() => onStatusUpdate(order._id, s)}>
               {s === 'cancelled' ? <X size={13} /> : <CheckCircle size={13} />}
-              {s.replace('_', ' ')}
+              <span className="hidden sm:inline">{s.replace('_', ' ')}</span>
             </Button>
           ))}
         </div>
@@ -219,15 +219,14 @@ const OrdersPage: React.FC = () => {
         </div>
 
         {/* Filters */}
-        <div className="flex flex-col sm:flex-row gap-3 mb-6">
-          <div className="flex-1">
-            <Input placeholder="Search by name or address..." value={search}
-              onChange={e => setSearch(e.target.value)} icon={<Search size={16} />} />
-          </div>
-          <div className="flex gap-2 flex-wrap">
+        <div className="flex flex-col gap-3 mb-6">
+          <Input placeholder="Search by name or address..." value={search}
+            onChange={e => setSearch(e.target.value)} icon={<Search size={16} />} />
+          {/* Scrollable status filter — no horizontal page overflow */}
+          <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none" style={{ scrollbarWidth: 'none' }}>
             {STATUS_FILTERS.map(s => (
               <button key={s} onClick={() => setStatusFilter(s)}
-                className={`px-3 py-2 rounded-xl text-xs font-semibold capitalize transition-all ${
+                className={`px-3 py-1.5 rounded-xl text-xs font-semibold capitalize transition-all whitespace-nowrap flex-shrink-0 ${
                   statusFilter === s
                     ? 'bg-navy-700 dark:bg-brand-600 text-white shadow-sm'
                     : 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600'
