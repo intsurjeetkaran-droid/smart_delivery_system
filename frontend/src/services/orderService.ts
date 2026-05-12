@@ -1,30 +1,35 @@
 import api from '../utils/api'
-import { API_ENDPOINTS } from '../utils/constants'
 
-// TODO: Implement OrderService class with order management methods
 class OrderService {
-  async getOrders(params?: any) {
-    // TODO: Implement get orders API call
+  async getOrders(status?: string) {
+    const params = status ? { status } : {}
+    const res = await api.get('/orders', { params })
+    return res.data
   }
 
   async getOrderById(id: string) {
-    // TODO: Implement get order by ID API call
+    const res = await api.get(`/orders/${id}`)
+    return res.data
   }
 
-  async createOrder(orderData: any) {
-    // TODO: Implement create order API call
+  async createOrder(orderData: {
+    customerName: string
+    customerPhone: string
+    pickupAddress: string
+    deliveryAddress: string
+  }) {
+    const res = await api.post('/orders', orderData)
+    return res.data
   }
 
-  async updateOrder(id: string, orderData: any) {
-    // TODO: Implement update order API call
+  async updateOrderStatus(id: string, status: string) {
+    const res = await api.patch(`/orders/${id}/status`, { status })
+    return res.data
   }
 
-  async deleteOrder(id: string) {
-    // TODO: Implement delete order API call
-  }
-
-  async getOrderHistory() {
-    // TODO: Implement get order history API call
+  async assignDriver(id: string, driverId: string) {
+    const res = await api.patch(`/orders/${id}/assign`, { driverId })
+    return res.data
   }
 }
 

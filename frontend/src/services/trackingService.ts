@@ -1,22 +1,25 @@
 import api from '../utils/api'
-import { API_ENDPOINTS } from '../utils/constants'
 
-// TODO: Implement TrackingService class with tracking methods
 class TrackingService {
-  async getTracking(orderId: string) {
-    // TODO: Implement get tracking API call
+  async getTrackingHistory(orderId: string) {
+    const res = await api.get(`/tracking/${orderId}`)
+    return res.data
   }
 
-  async updateLocation(orderId: string, location: { lat: number; lng: number }) {
-    // TODO: Implement update location API call
+  async getLatestLocation(orderId: string) {
+    const res = await api.get(`/tracking/${orderId}/latest`)
+    return res.data
   }
 
-  async getRoute(orderId: string) {
-    // TODO: Implement get route API call
-  }
-
-  async updateDeliveryStatus(orderId: string, status: string) {
-    // TODO: Implement update delivery status API call
+  async saveLocation(data: {
+    orderId: string
+    driverId: string
+    latitude: number
+    longitude: number
+    status?: string
+  }) {
+    const res = await api.post('/tracking', data)
+    return res.data
   }
 }
 

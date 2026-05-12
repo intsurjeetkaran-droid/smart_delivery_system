@@ -1,27 +1,19 @@
 import api from '../utils/api'
-import { API_ENDPOINTS } from '../utils/constants'
 
-// TODO: Implement AuthService class with authentication methods
 class AuthService {
   async login(email: string, password: string) {
-    // TODO: Implement login API call
+    const res = await api.post('/auth/login', { email, password })
+    return res.data
   }
 
-  async register(userData: {
-    name: string
-    email: string
-    password: string
-    role: string
-  }) {
-    // TODO: Implement register API call
+  async register(userData: { name: string; email: string; password: string; role: string }) {
+    const res = await api.post('/auth/register', userData)
+    return res.data
   }
 
   async getProfile() {
-    // TODO: Implement get profile API call
-  }
-
-  async updateProfile(userData: any) {
-    // TODO: Implement update profile API call
+    const res = await api.get('/auth/profile')
+    return res.data
   }
 }
 
