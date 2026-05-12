@@ -8,7 +8,6 @@ import Input from '../components/Input'
 const ROLES = [
   { value: 'customer', label: 'Customer', desc: 'Place and track orders' },
   { value: 'driver',   label: 'Driver',   desc: 'Accept and deliver orders' },
-  { value: 'admin',    label: 'Admin',    desc: 'Manage the platform' },
 ]
 
 const RegisterPage: React.FC = () => {
@@ -77,7 +76,7 @@ const RegisterPage: React.FC = () => {
             {/* Role selector */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">I am a...</label>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 gap-2">
                 {ROLES.map(r => (
                   <button
                     key={r.value}
