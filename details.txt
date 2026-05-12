@@ -1,10 +1,10 @@
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
-║          SMART DELIVERY & ROUTE OPTIMIZATION SYSTEM                          ║
-║          Complete Platform Guide — For Everyone                              ║
+║       SMART DELIVERY & ROUTE OPTIMIZATION SYSTEM                             ║
+║       Complete Platform Guide — For Everyone                                 ║
 ║                                                                              ║
-║          Developer: Surjeet Akaran                                           ║
-║          GitHub:    https://github.com/intsurjeetkaran-droid/smart_delivery_system ║
+║       Developer: Surjeet Karan                                              ║
+║       GitHub: https://github.com/intsurjeetkaran-droid/smart_delivery_system ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
@@ -442,7 +442,7 @@ STEP 4 — Seed test data (optional, already done)
   DEVELOPER
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  Name:    Surjeet Akaran
+  Name:    Surjeet Karan
   GitHub:  https://github.com/intsurjeetkaran-droid
   Project: https://github.com/intsurjeetkaran-droid/smart_delivery_system
 
